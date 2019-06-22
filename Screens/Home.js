@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, ScrollView, Text, View, Image } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants'
 
 export default function App() {
   return (
