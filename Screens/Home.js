@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, Text, View, Image } from 'react-native';
 import Constants from 'expo-constants'
+import Transaction from '../Components/Transaction';
 
 export default function App() {
   return (
@@ -12,8 +13,8 @@ export default function App() {
         />
         <Text>325.000 RSD.</Text>
       </View>
-      <View>
-        <Text style={styles.categoryTitle}>Kategorije</Text>
+      <View style={styles.categoryWrap}>
+        <Text style={styles.title}>Kategorije</Text>
         <ScrollView
           contentContainerStyle={styles.categoryScroll}
           horizontal
@@ -29,6 +30,74 @@ export default function App() {
           </View>
         </ScrollView>
       </View>
+      <View>
+        <Text style={styles.title}>Transakcije</Text>
+      </View>
+      <ScrollView>
+        <Transaction
+          name="Mleko i Hleb"
+          category="Namirnice"
+          price={200}
+          date="22/06/2019"
+          status="red"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+        <Transaction
+          name="Tetka iz kanade"
+          category="Priliv"
+          price={20000}
+          date="22/06/2019"
+          status="green"
+        />
+      </ScrollView>
     </View>
   );
 }
@@ -52,10 +121,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: Constants.statusBarHeight,
   },
-  categoryTitle: {
+  title: {
     fontSize: 20,
     marginBottom: 20,
     marginLeft: 10,
+  },
+  categoryWrap: {
+    marginBottom: 20,
   },
   categoryScroll: {
     paddingLeft: 20,
