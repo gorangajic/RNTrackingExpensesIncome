@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, Text, View, Image } from 'react-native';
 import { Constants } from 'expo';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>Burger</Text>
+        <Image source={require('../assets/burger.png')} style={styles.menu} resizeMode="cover" />
         <Text>325.000 RSD.</Text>
       </View>
       <View>
@@ -37,6 +37,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 20,
+  },
+  menu: {
+    width: 24,
+    height: 24,
   },
   container: {
     flex: 1,
