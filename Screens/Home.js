@@ -6,12 +6,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={require('../assets/burger.png')} style={styles.menu} resizeMode="cover" />
+        <Image
+          source={require('../assets/burger.png')}
+          style={styles.menu}
+        />
         <Text>325.000 RSD.</Text>
       </View>
       <View>
         <Text style={styles.categoryTitle}>Kategorije</Text>
-        <ScrollView contentContainerStyle={styles.categoryScroll} horizontal>
+        <ScrollView
+          contentContainerStyle={styles.categoryScroll}
+          horizontal
+        >
           <View style={styles.category}>
             <Text style={styles.categoryText}>Namirnice</Text>
           </View>
