@@ -1,104 +1,111 @@
 import React from 'react';
 import { StyleSheet, ScrollView, Text, View, Image } from 'react-native';
 import Constants from 'expo-constants'
+import SideMenu from 'react-native-side-menu';
 import Transaction from '../Components/Transaction';
+import Menu from '../Components/Menu';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Image
-          source={require('../assets/burger.png')}
-          style={styles.menu}
-        />
-        <Text>325.000 RSD.</Text>
-      </View>
-      <View style={styles.categoryWrap}>
-        <Text style={styles.title}>Kategorije</Text>
-        <ScrollView
-          contentContainerStyle={styles.categoryScroll}
-          horizontal
-        >
-          <View style={styles.category}>
-            <Text style={styles.categoryText}>Namirnice</Text>
-          </View>
-          <View style={styles.category}>
-            <Text style={styles.categoryText}>Auto</Text>
-          </View>
-          <View style={styles.category}>
-            <Text style={styles.categoryText}>Plata</Text>
-          </View>
+    <SideMenu
+      menu={<Menu />}
+      isOpen
+    >
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Image
+            source={require('../assets/burger.png')}
+            style={styles.menu}
+          />
+          <Text>325.000 RSD.</Text>
+        </View>
+        <View style={styles.categoryWrap}>
+          <Text style={styles.title}>Kategorije</Text>
+          <ScrollView
+            contentContainerStyle={styles.categoryScroll}
+            horizontal
+          >
+            <View style={styles.category}>
+              <Text style={styles.categoryText}>Namirnice</Text>
+            </View>
+            <View style={styles.category}>
+              <Text style={styles.categoryText}>Auto</Text>
+            </View>
+            <View style={styles.category}>
+              <Text style={styles.categoryText}>Plata</Text>
+            </View>
+          </ScrollView>
+        </View>
+        <View>
+          <Text style={styles.title}>Transakcije</Text>
+        </View>
+        <ScrollView>
+          <Transaction
+            name="Mleko i Hleb"
+            category="Namirnice"
+            price={200}
+            date="22/06/2019"
+            status="red"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
+          <Transaction
+            name="Tetka iz kanade"
+            category="Priliv"
+            price={20000}
+            date="22/06/2019"
+            status="green"
+          />
         </ScrollView>
       </View>
-      <View>
-        <Text style={styles.title}>Transakcije</Text>
-      </View>
-      <ScrollView>
-        <Transaction
-          name="Mleko i Hleb"
-          category="Namirnice"
-          price={200}
-          date="22/06/2019"
-          status="red"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-        <Transaction
-          name="Tetka iz kanade"
-          category="Priliv"
-          price={20000}
-          date="22/06/2019"
-          status="green"
-        />
-      </ScrollView>
-    </View>
+    </SideMenu>
   );
 }
 
